@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arya Bookshelf</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Arya Bookshelf</h1>
+    </header>
+    <main>
+      <div class="flex-container">
+        <div class="input_buku">
+          <h2>Insert New Book</h2>
+          <form id="inputBuku">
+            <div class="input" id="sectionTitle">
+              <label for="inputBookTitle">Title</label>
+              <input
+                id="inputBookTitle"
+                type="text"
+                placeholder="Book Title"
+                required
+              />
+            </div>
+            <div class="input" id="sectionAuthor">
+              <label for="inputBookAuthor">Author</label>
+              <input
+                id="inputBookAuthor"
+                type="text"
+                placeholder="Author Name"
+                required
+              />
+            </div>
+            <div class="input" id="sectionYear">
+              <label for="inputBookYear">Year</label>
+              <input
+                id="inputBookYear"
+                type="number"
+                placeholder="Publication Year"
+                required
+              />
+            </div>
+            <div class="input_inline">
+              <label for="inputBookIsComplete">Readed</label>
+              <input id="inputBookIsComplete" type="checkbox" />
+            </div>
+            <button id="bookSubmit" type="submit">Insert Book</button>
+          </form>
+        </div>
+        <div class="input_buku">
+          <h2>Find Books</h2>
+          <form id="searchBook">
+            <input
+              id="searchBookTitle"
+              type="text"
+              placeholder="Find Books.."
+            />
+            <button id="searchSubmit" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+          <h2>Search Result:</h2>
+
+          <div id="searchResult" class="book_list" style="width: 100%"></div>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="input_buku">
+          <h2>Unread</h2>
+          <div id="uncompletedBookshelfList" class="book_list"></div>
+        </div>
+        <div class="input_buku">
+          <h2>Readed</h2>
+          <div id="completedBookshelfList" class="book_list"></div>
+        </div>
+      </div>
+    </main>
+    <script src="/js/script.js"></script>
+    <script src="/js/search.js"></script>
+  </body>
+</html>
